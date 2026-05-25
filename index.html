@@ -6,237 +6,306 @@
     <title>Recalibrate | Switch off. Reset. Reconnect.</title>
     <meta
       name="description"
-      content="A premium nature-based weekend reset for FOMO Hustlers who are tired of resting through a screen."
+      content="Recalibrate is a premium nature-based wellness resort for FOMO Hustlers who need a weekend away from screens, stress and passive scrolling."
     >
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="pledge-bar">
+      <p>Take the Screen-Off Pledge: arrive online, leave recharged.</p>
+      <a href="#newsletter">Get the next drop first</a>
+    </div>
+
     <header class="site-header" aria-label="Main navigation">
-      <a class="brand-mark" href="#top" aria-label="Recalibrate home">
+      <a class="brand-lockup" href="#top" aria-label="Recalibrate home">
         <span class="brand-symbol">R</span>
         <span>Recalibrate</span>
       </a>
       <nav class="nav-links" aria-label="Page sections">
-        <a href="#experience">Experience</a>
+        <a href="#stay">Stay</a>
+        <a href="#recover">Recover</a>
         <a href="#collection">Recab Collection</a>
+        <a href="#routes">Itineraries</a>
         <a href="#packages">Packages</a>
       </nav>
-      <a class="nav-cta" href="#packages">Book</a>
+      <a class="header-cta" href="#planner">Plan My Reset</a>
     </header>
 
-    <main id="top">
-      <section class="hero section-shell" aria-labelledby="hero-title">
-        <div class="hero-media" role="img" aria-label="A cinematic nature resort at dusk"></div>
-        <div class="hero-pattern" aria-hidden="true"></div>
-        <div class="hero-grid">
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-photo" aria-hidden="true"></div>
+        <div class="hero-scrim" aria-hidden="true"></div>
+        <div class="hero-inner">
           <div class="hero-copy">
-            <p class="eyebrow">A weekend reset for FOMO Hustlers</p>
+            <p class="eyebrow">Weekend wellness resort for FOMO Hustlers</p>
             <h1 id="hero-title">Switch off. Reset. Reconnect.</h1>
             <p class="hero-subline">
-              A next-generation wellness resort set in nature, built for people
-              who are tired of resting through a screen.
+              A weekend reset for people who are tired of resting through a screen.
             </p>
-            <div class="hero-actions" aria-label="Primary actions">
-              <a class="button button-primary" href="#packages">Book Your Reset</a>
-              <a class="button button-secondary" href="#collection">Explore Recab Collection</a>
+            <p class="hero-hook">Your phone recharged. Did you?</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#planner">Plan My Reset</a>
+              <a class="button button-ghost" href="#collection">Explore Recab Collection</a>
             </div>
           </div>
 
-          <aside class="recovery-panel" aria-label="Recovery preview">
-            <div class="panel-topline">
-              <span>Live reset status</span>
-              <strong>48 hrs</strong>
-            </div>
-            <div class="battery-grid">
-              <div>
-                <span class="meter-label">Phone</span>
-                <div class="meter meter-full"><span style="width: 100%"></span></div>
-                <strong>100%</strong>
-              </div>
-              <div>
-                <span class="meter-label">You</span>
-                <div class="meter meter-low"><span style="width: 12%"></span></div>
-                <strong>12%</strong>
-              </div>
-            </div>
-            <div class="mini-stats">
-              <span>AI recovery plan</span>
-              <span>Hydrotherapy block</span>
-              <span>Phone-free memories</span>
+          <aside class="hero-board" aria-label="Recalibrate trip preview">
+            <img src="./assets/social-campfire.jpg" alt="Young friends sharing a phone-free moment around a campfire">
+            <div>
+              <span>48 hour reset</span>
+              <strong>Phone 100% / You 12%</strong>
+              <p>AI-personalised recovery, hydrotherapy, contrast circuits and social moments designed to be remembered after the phones come back.</p>
             </div>
           </aside>
         </div>
       </section>
 
-      <section class="insight-strip" aria-labelledby="insight-title">
-        <div>
-          <p class="eyebrow">The uncomfortable truth</p>
-          <h2 id="insight-title">Your phone recharged. Did you?</h2>
+      <section class="planner" id="planner" aria-labelledby="planner-title">
+        <div class="planner-heading">
+          <p class="eyebrow">Find your reset</p>
+          <h2 id="planner-title">Plan the weekend around how burnt out you actually feel.</h2>
         </div>
-        <p>
-          Recalibrate turns the weekend from passive scrolling into a designed
-          reset: recovery technology, nature immersion and social moments worth
-          remembering after the phones come back.
-        </p>
+        <form class="planner-panel">
+          <fieldset>
+            <legend>Choose quarter</legend>
+            <div class="option-row" data-planner-group="quarter">
+              <button type="button" class="planner-option is-selected" data-value="Q1 New Charge">Q1</button>
+              <button type="button" class="planner-option" data-value="Q2 Deep Current">Q2</button>
+              <button type="button" class="planner-option" data-value="Q3 Warm Circuit">Q3</button>
+              <button type="button" class="planner-option" data-value="Q4 Afterglow Archive">Q4</button>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Choose reset type</legend>
+            <div class="option-row" data-planner-group="reset">
+              <button type="button" class="planner-option is-selected" data-value="Burnout Reset">Burnout</button>
+              <button type="button" class="planner-option" data-value="Friend Reset">Friends</button>
+              <button type="button" class="planner-option" data-value="Premium Recovery">Premium</button>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Choose group type</legend>
+            <div class="option-row" data-planner-group="group">
+              <button type="button" class="planner-option is-selected" data-value="2 guests">Couple</button>
+              <button type="button" class="planner-option" data-value="4 friends">Friends</button>
+              <button type="button" class="planner-option" data-value="team booking">Team</button>
+            </div>
+          </fieldset>
+          <div class="planner-result" aria-live="polite">
+            <span id="planner-summary">Q1 New Charge / Burnout Reset / 2 guests</span>
+            <a class="button button-primary" href="#packages">Plan My Reset</a>
+          </div>
+        </form>
       </section>
 
-      <section class="section-shell split-section" id="experience" aria-labelledby="experience-title">
-        <div class="section-heading">
-          <p class="eyebrow">The experience</p>
-          <h2 id="experience-title">Recovery that feels social, not clinical.</h2>
-          <p>
-            Recalibrate makes digital detox feel intentional: guests surrender
-            the screen, then step into a weekend designed around recovery,
-            connection and collectible memories.
-          </p>
+      <section class="category-section section-shell" id="recover" aria-labelledby="way-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Find your way to reset</p>
+          <h2 id="way-title">A resort experience built around what young workers actually miss.</h2>
         </div>
-        <div class="experience-grid">
-          <article class="feature-card">
-            <span class="feature-index">01</span>
-            <h3>AI-personalised recovery</h3>
-            <p>Pre-arrival profiling creates a simple plan for rest, movement and therapy blocks.</p>
+        <div class="category-grid">
+          <article class="category-card large-card" id="stay">
+            <img src="./assets/stay-cabin.jpg" alt="A quiet cabin set among trees">
+            <div>
+              <span>Stay</span>
+              <h3>Sleep somewhere your inbox cannot follow.</h3>
+            </div>
           </article>
-          <article class="feature-card">
-            <span class="feature-index">02</span>
-            <h3>Contrast therapy</h3>
-            <p>Guided heat and cold circuits make the reset feel physical, visible and credible.</p>
+          <article class="category-card">
+            <img src="./assets/recover-pool.jpg" alt="A calm pool surrounded by nature">
+            <div>
+              <span>Recover</span>
+              <h3>Hydrotherapy, contrast circuits and AI-guided recovery.</h3>
+            </div>
           </article>
-          <article class="feature-card">
-            <span class="feature-index">03</span>
-            <h3>Hydrotherapy in nature</h3>
-            <p>Recovery pools and water rituals turn the resort environment into physical evidence.</p>
+          <article class="category-card">
+            <img src="./assets/social-campfire.jpg" alt="A group of young people around a campfire">
+            <div>
+              <span>Socialise</span>
+              <h3>Phone-free movie nights, workshops and photobooth hunts.</h3>
+            </div>
           </article>
-          <article class="feature-card">
-            <span class="feature-index">04</span>
-            <h3>Phone-free social entertainment</h3>
-            <p>Movie nights, workshops and photobooth hunts replace scrolling with shared memories.</p>
+          <article class="category-card collection-card">
+            <div class="pattern-card" aria-hidden="true"></div>
+            <div>
+              <span>Collect</span>
+              <h3>Limited quarterly drops that make the trip feel ownable.</h3>
+            </div>
+          </article>
+          <article class="category-card">
+            <img src="./assets/water-route.jpg" alt="A nature pool with open sky and forest">
+            <div>
+              <span>Corporate Reset</span>
+              <h3>Team recovery days before the next quarter hits.</h3>
+            </div>
           </article>
         </div>
       </section>
 
-      <section class="collection-section section-shell" id="collection" aria-labelledby="collection-title">
-        <div class="section-heading collection-heading">
-          <p class="eyebrow">Event campaign</p>
-          <h2 id="collection-title">Recab Collection</h2>
-          <p>
-            Four limited seasonal drops. Choose a quarter, collect the theme and
-            give yourself a reason to reset before burnout becomes your default.
-          </p>
-        </div>
-
-        <div class="collection-layout">
-          <div class="quarter-list" role="tablist" aria-label="Recab Collection quarters">
-            <button class="quarter-card is-active" type="button" role="tab" aria-selected="true" data-quarter="q1">
-              <span>Q1</span>
-              <strong>New Charge</strong>
-              <small>Jan - Mar</small>
-            </button>
-            <button class="quarter-card" type="button" role="tab" aria-selected="false" data-quarter="q2">
-              <span>Q2</span>
-              <strong>Deep Current</strong>
-              <small>Apr - Jun</small>
-            </button>
-            <button class="quarter-card" type="button" role="tab" aria-selected="false" data-quarter="q3">
-              <span>Q3</span>
-              <strong>Warm Circuit</strong>
-              <small>Jul - Sep</small>
-            </button>
-            <button class="quarter-card" type="button" role="tab" aria-selected="false" data-quarter="q4">
-              <span>Q4</span>
-              <strong>Afterglow Archive</strong>
-              <small>Oct - Dec</small>
-            </button>
+      <section class="drop-section" id="collection" aria-labelledby="drop-title">
+        <div class="section-shell drop-shell">
+          <div class="drop-intro">
+            <p class="eyebrow">This quarter's drop</p>
+            <h2 id="drop-title">Four quarters. Four drops. One reset passport.</h2>
+            <p>
+              Recab Collection turns wellness into a seasonal travel campaign:
+              book the quarter, collect the object, take the themed frame home.
+            </p>
           </div>
 
-          <article class="collection-detail" aria-live="polite">
-            <div class="drop-badge">Limited drop 01 / 04</div>
-            <div class="collection-visual" aria-hidden="true">
-              <div class="collectible collectible-one"></div>
-              <div class="collectible collectible-two"></div>
-              <div class="collectible collectible-three"></div>
+          <div class="drop-browser">
+            <div class="quarter-tabs" role="tablist" aria-label="Recab Collection quarters">
+              <button class="quarter-tab is-active" type="button" role="tab" aria-selected="true" data-quarter="q1">
+                <span>Q1</span>
+                New Charge
+              </button>
+              <button class="quarter-tab" type="button" role="tab" aria-selected="false" data-quarter="q2">
+                <span>Q2</span>
+                Deep Current
+              </button>
+              <button class="quarter-tab" type="button" role="tab" aria-selected="false" data-quarter="q3">
+                <span>Q3</span>
+                Warm Circuit
+              </button>
+              <button class="quarter-tab" type="button" role="tab" aria-selected="false" data-quarter="q4">
+                <span>Q4</span>
+                Afterglow Archive
+              </button>
             </div>
-            <div class="collection-copy">
-              <p class="eyebrow" id="quarter-months">January - March</p>
-              <h3 id="quarter-title">Q1: New Charge</h3>
-              <p id="quarter-story">
-                A fresh-start drop for guests who want their reset to feel like
-                the first real breath of the year.
-              </p>
-              <ul id="quarter-items" class="item-list">
-                <li>Mini plant in a numbered Recalibrate pot</li>
-                <li>Charged heart desk model</li>
-                <li>New-growth photobooth frame</li>
-              </ul>
-              <p class="collection-logic" id="quarter-logic">
-                Built for FOMO Hustlers: limited objects, a seasonal frame and a
-                visible collection mechanic create a reason to book now, return
-                later and share after the retreat.
-              </p>
-              <a class="button button-primary" href="#packages" id="quarter-cta">Collect Q1</a>
-            </div>
-          </article>
+
+            <article class="drop-card" aria-live="polite">
+              <div class="drop-image" id="drop-image" role="img" aria-label="Quarterly campaign image">
+                <div class="drop-label" id="drop-badge">Limited drop 01 / 04</div>
+                <div class="passport-stamp">Collect 1 of 4</div>
+              </div>
+              <div class="drop-copy">
+                <p class="eyebrow" id="quarter-months">January - March</p>
+                <h3 id="quarter-title">Q1: New Charge</h3>
+                <p id="quarter-story">
+                  A fresh-start drop for guests who want their reset to feel like the first real breath of the year.
+                </p>
+                <ul id="quarter-items" class="item-list">
+                  <li>Mini plant in a numbered Recalibrate pot</li>
+                  <li>Charged heart desk model</li>
+                  <li>New-growth photobooth frame</li>
+                </ul>
+                <p class="drop-logic" id="quarter-logic">
+                  Quarterly drops create urgency, repeat visits and smoother demand across the year.
+                </p>
+                <a class="button button-primary" href="#packages" id="quarter-cta">Collect Q1</a>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="why-section" aria-labelledby="why-title">
-        <div class="section-shell why-grid">
+      <section class="routes-section section-shell" id="routes" aria-labelledby="routes-title">
+        <div class="routes-copy">
+          <p class="eyebrow">Choose your reset route</p>
+          <h2 id="routes-title">Not every burnout looks the same.</h2>
+          <p>
+            Browse Recalibrate like a destination. Each route changes the pace,
+            therapy blocks and social moments of the stay.
+          </p>
+          <div class="route-tabs" role="tablist" aria-label="Reset routes">
+            <button class="route-tab is-active" type="button" data-route="burnout">Burnout Reset</button>
+            <button class="route-tab" type="button" data-route="friends">Friend Reset</button>
+            <button class="route-tab" type="button" data-route="premium">Premium Recovery</button>
+            <button class="route-tab" type="button" data-route="team">Team Reset</button>
+          </div>
+        </div>
+        <article class="route-feature" aria-live="polite">
+          <img id="route-image" src="./assets/recover-pool.jpg" alt="A calm pool surrounded by nature">
           <div>
-            <p class="eyebrow">Why this campaign works</p>
-            <h2 id="why-title">Limited by design. Useful by strategy.</h2>
+            <span id="route-tag">For screen fatigue</span>
+            <h3 id="route-title">Burnout Reset</h3>
+            <p id="route-copy">
+              A slower itinerary for people who feel tired even after a weekend at home.
+              Expect hydrotherapy, contrast therapy, guided rest and low-pressure social moments.
+            </p>
           </div>
-          <div class="why-points">
+        </article>
+      </section>
+
+      <section class="packages-section" id="packages" aria-labelledby="packages-title">
+        <div class="section-shell">
+          <div class="section-kicker">
+            <p class="eyebrow">Packages</p>
+            <h2 id="packages-title">Choose the version of reset you can actually book.</h2>
+          </div>
+          <div class="package-grid">
             <article>
-              <h3>Targets FOMO psychology</h3>
-              <p>Collectible drops turn the resort into a trend-aware experience for young, high-spending guests.</p>
+              <span>Weekend Reset</span>
+              <h3>AUD $990</h3>
+              <p>Friday-to-Sunday stay with AI recovery plan, hydrotherapy and social programming.</p>
+            </article>
+            <article class="featured-package">
+              <span>Off-Peak Reset</span>
+              <h3>AUD $790</h3>
+              <p>Weekday reset tied to quarterly drops to smooth demand outside peak weekends.</p>
             </article>
             <article>
-              <h3>Smooths irregular demand</h3>
-              <p>Quarterly themes create fresh reasons to book across the year instead of relying on peak weekends.</p>
+              <span>Premium Recovery</span>
+              <h3>AUD $1,590</h3>
+              <p>Private stay, deeper personalisation and extended contrast/hydrotherapy blocks.</p>
             </article>
             <article>
-              <h3>Makes memories physical</h3>
-              <p>Photobooth frames, keepsakes and a collection passport make the phone-free promise visible.</p>
+              <span>Corporate Reset</span>
+              <h3>AUD $480 / day</h3>
+              <p>Team wellbeing days built around focus, recovery and quarter-start momentum.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section-shell packages-section" id="packages" aria-labelledby="packages-title">
-        <div class="section-heading">
-          <p class="eyebrow">Packages</p>
-          <h2 id="packages-title">Choose your reset.</h2>
+      <section class="proof-section section-shell" aria-labelledby="proof-title">
+        <div>
+          <p class="eyebrow">Why people book the reset</p>
+          <h2 id="proof-title">The promise is simple: leave with more than a rested body.</h2>
         </div>
-        <div class="package-grid">
-          <article class="package-card">
-            <span>Weekend Reset</span>
-            <h3>AUD $990</h3>
-            <p>Friday-to-Sunday reset with recovery plan, hydrotherapy and social experiences.</p>
+        <div class="proof-grid">
+          <article>
+            <strong>The overworked friend group</strong>
+            <p>A weekend that gives them a shared memory without turning the whole trip into content production.</p>
           </article>
-          <article class="package-card accent-package">
-            <span>Off-Peak Reset</span>
-            <h3>AUD $790</h3>
-            <p>Weekday reset designed to fill quieter periods while keeping the service attainable.</p>
+          <article>
+            <strong>The screen-tired professional</strong>
+            <p>A reset with enough structure to feel intentional, but enough beauty to feel like a real escape.</p>
           </article>
-          <article class="package-card">
-            <span>Premium Recovery</span>
-            <h3>AUD $1,590</h3>
-            <p>Private stay, deeper personalisation and enhanced therapy blocks.</p>
-          </article>
-          <article class="package-card">
-            <span>Corporate Reset</span>
-            <h3>AUD $480 / day</h3>
-            <p>Group wellbeing sessions for teams that need recovery before another quarter starts.</p>
+          <article>
+            <strong>The trend-aware traveller</strong>
+            <p>Limited quarterly collectibles make the stay feel timely, ownable and worth booking before it changes.</p>
           </article>
         </div>
       </section>
 
-      <section class="final-cta" aria-labelledby="final-title">
-        <div class="final-pattern" aria-hidden="true"></div>
-        <p class="eyebrow">Book the drop before it resets</p>
-        <h2 id="final-title">Choose your quarter. Collect your reset.</h2>
-        <a class="button button-primary" href="#top">Return to Top</a>
+      <section class="newsletter" id="newsletter" aria-labelledby="newsletter-title">
+        <div class="newsletter-photo" aria-hidden="true"></div>
+        <div class="newsletter-panel">
+          <p class="eyebrow">Get the next drop first</p>
+          <h2 id="newsletter-title">Know before the quarter resets.</h2>
+          <p>
+            Join the Recab list for drop previews, off-peak release windows and collection passport updates.
+          </p>
+          <form class="signup-form">
+            <label for="email">Email address</label>
+            <div>
+              <input id="email" type="email" name="email" placeholder="you@example.com" required>
+              <button class="button button-primary" type="submit">Send Drop Alerts</button>
+            </div>
+            <p class="form-message" aria-live="polite"></p>
+          </form>
+        </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <span>Recalibrate</span>
+      <p>Switch off. Reset. Reconnect.</p>
+      <a href="#top">Back to top</a>
+    </footer>
 
     <script src="./script.js"></script>
   </body>
