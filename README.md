@@ -1,6 +1,6 @@
 # Recalibrate Landing Page
 
-Static tourism-style landing page for Recalibrate and the Recab Collection campaign.
+Static Wix-inspired landing page for Recalibrate and the Recab Collection campaign.
 
 ## Local Preview
 
