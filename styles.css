@@ -23,6 +23,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -31,6 +32,7 @@ body {
   color: var(--ink);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   letter-spacing: 0;
+  overflow-x: clip;
 }
 
 img {
@@ -119,9 +121,9 @@ main > section {
 }
 
 .hero {
-  min-height: 100vh;
+  min-height: 96vh;
   overflow: hidden;
-  padding: 160px 0 0;
+  padding: 120px 0 36px;
   background:
     radial-gradient(circle at 18% 72%, rgba(76, 111, 255, 0.14), transparent 23rem),
     linear-gradient(180deg, #fbfbff 0%, var(--lavender) 100%);
@@ -151,8 +153,10 @@ p {
 }
 
 h1 {
+  max-width: 780px;
+  margin-inline: auto;
   margin-bottom: 24px;
-  font-size: clamp(4.1rem, 9.2vw, 9.4rem);
+  font-size: clamp(3.8rem, 7.8vw, 7.9rem);
   font-weight: 430;
   line-height: 0.85;
   letter-spacing: -0.035em;
@@ -223,30 +227,30 @@ h3 {
 
 .design-stage {
   position: relative;
-  width: min(1420px, 100%);
-  min-height: 430px;
-  margin: 120px auto 0;
+  width: min(1120px, calc(100% - 48px));
+  min-height: 332px;
+  margin: 48px auto 0;
 }
 
 .editor-card {
   position: absolute;
   left: 50%;
-  bottom: -18px;
-  width: min(735px, 54vw);
-  min-height: 330px;
+  bottom: 0;
+  width: min(620px, 56vw);
+  min-height: 286px;
   transform: translateX(-50%);
   border-radius: 28px 28px 0 0;
   background: rgba(255, 255, 255, 0.82);
   box-shadow: var(--shadow);
-  padding: 34px;
+  padding: 28px;
 }
 
 .selection-box {
   position: absolute;
-  left: 62px;
-  top: 58px;
-  width: 350px;
-  height: 128px;
+  left: 52px;
+  top: 48px;
+  width: 300px;
+  height: 104px;
   border: 3px solid var(--blue);
 }
 
@@ -273,15 +277,15 @@ h3 {
 
 .editor-grid {
   display: grid;
-  grid-template-columns: 1fr 300px;
-  gap: 28px;
+  grid-template-columns: 1fr 250px;
+  gap: 24px;
   align-items: end;
 }
 
 .brand-preview {
   position: relative;
   z-index: 2;
-  min-height: 175px;
+  min-height: 145px;
   display: grid;
   place-items: center;
   text-align: center;
@@ -289,7 +293,7 @@ h3 {
 
 .brand-preview span {
   color: var(--coral);
-  font-size: 3.3rem;
+  font-size: 2.75rem;
   font-weight: 950;
   letter-spacing: -0.05em;
 }
@@ -302,28 +306,28 @@ h3 {
 
 .editor-grid img {
   width: 100%;
-  height: 230px;
+  height: 200px;
   object-fit: cover;
   border-radius: 22px;
 }
 
 .palette {
   grid-column: 1 / -1;
-  width: 360px;
+  width: 320px;
   max-width: 100%;
   display: flex;
   gap: 16px;
   align-items: center;
   justify-content: center;
-  padding: 16px;
+  padding: 14px;
   border-radius: 999px;
   background: white;
   box-shadow: 0 16px 38px rgba(24, 23, 46, 0.12);
 }
 
 .swatch {
-  width: 42px;
-  height: 42px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
 }
 
@@ -348,17 +352,17 @@ h3 {
 }
 
 .card-left {
-  left: 30px;
-  bottom: 30px;
-  width: 288px;
-  height: 325px;
+  left: 18px;
+  bottom: 24px;
+  width: 230px;
+  height: 270px;
 }
 
 .card-right {
-  right: 30px;
-  bottom: 32px;
-  width: 310px;
-  height: 325px;
+  right: 18px;
+  bottom: 24px;
+  width: 250px;
+  height: 270px;
   border: 3px solid #0d6886;
 }
 
@@ -457,8 +461,8 @@ h3 {
 .faq-section {
   width: min(1180px, calc(100% - 32px));
   display: grid;
-  grid-template-columns: 0.86fr 1fr;
-  gap: 56px;
+  grid-template-columns: minmax(420px, 0.92fr) minmax(0, 1.08fr);
+  gap: 72px;
   align-items: center;
   margin: 120px auto;
 }
@@ -472,6 +476,20 @@ h3 {
 
 .section-copy {
   max-width: 620px;
+}
+
+.customize-section .section-copy {
+  max-width: 680px;
+}
+
+.customize-section {
+  width: min(1360px, calc(100% - 64px));
+  grid-template-columns: minmax(520px, 0.95fr) minmax(0, 1.05fr);
+}
+
+.customize-section h2 {
+  font-size: clamp(3.4rem, 4.8vw, 5.2rem);
+  line-height: 0.92;
 }
 
 .mockup {
@@ -618,14 +636,6 @@ h3 {
 .floating-toolbar .selected {
   background: var(--black);
   color: white;
-}
-
-.outline-box {
-  position: absolute;
-  inset: 36px 56px auto auto;
-  width: 170px;
-  height: 130px;
-  border: 3px solid var(--blue);
 }
 
 .life-section {
@@ -782,7 +792,8 @@ details p {
   }
 
   .design-stage {
-    min-height: 690px;
+    min-height: 660px;
+    margin-top: 74px;
   }
 
   .editor-card {
@@ -791,18 +802,19 @@ details p {
 
   .card-left {
     left: 32px;
-    bottom: 360px;
+    bottom: 340px;
   }
 
   .card-right {
     right: 32px;
-    bottom: 360px;
+    bottom: 340px;
   }
 
   .planner,
   .feature-section,
   .customize-section,
   .faq-section {
+    width: min(1180px, calc(100% - 32px));
     grid-template-columns: 1fr;
   }
 
@@ -833,7 +845,8 @@ details p {
   }
 
   .hero {
-    padding-top: 116px;
+    min-height: auto;
+    padding: 104px 0 52px;
   }
 
   .hero-actions,
@@ -851,8 +864,8 @@ details p {
   }
 
   .design-stage {
-    min-height: 900px;
-    margin-top: 70px;
+    min-height: auto;
+    margin-top: 54px;
   }
 
   .editor-card,
@@ -930,10 +943,6 @@ details p {
     margin: 18px auto 0;
     width: fit-content;
     max-width: 100%;
-  }
-
-  .outline-box {
-    display: none;
   }
 
   .package-grid,
