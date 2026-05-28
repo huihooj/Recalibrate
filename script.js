@@ -56,7 +56,7 @@ function initMotion() {
       intro
         .from(".site-header", { y: -24, autoAlpha: 0, duration: 0.5 })
         .from(".hero-copy > *", { y: 28, autoAlpha: 0, stagger: 0.08 }, "<0.12")
-        .from(".reset-status", { y: 34, autoAlpha: 0 }, "<0.18");
+        .from(".design-stage", { y: 34, autoAlpha: 0 }, "<0.18");
 
       ScrollTrigger.batch(".reveal-section", {
         start: "top 82%",
@@ -70,16 +70,19 @@ function initMotion() {
         }
       });
 
-      gsap.to(".hero-bg", {
-        yPercent: 9,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".hero",
-          start: "top top",
-          end: "bottom top",
-          scrub: 0.7
-        }
-      });
+      const heroStage = document.querySelector(".design-stage");
+      if (heroStage) {
+        gsap.to(heroStage, {
+          yPercent: 4,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".hero",
+            start: "top top",
+            end: "bottom top",
+            scrub: 0.7
+          }
+        });
+      }
 
       return () => {
         ScrollTrigger.getAll().forEach((trigger) => trigger.kill());

@@ -2,7 +2,7 @@
   "name": "recalibrate-landing-page",
   "version": "1.0.0",
   "private": true,
-  "description": "Static Recalibrate landing page for the Recab Collection campaign.",
+  "description": "Static Wix-inspired landing page for the Recalibrate wellness resort.",
   "scripts": {
     "deploy": "vercel --prod"
   }
