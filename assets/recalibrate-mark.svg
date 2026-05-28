@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Recalibrate wellness retreat mark</title>
+  <desc id="desc">Circular nature mark with waves and sun rays.</desc>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M31 87a55 55 0 0 1 66-65" stroke="#052d18" stroke-width="6"/>
+    <path d="M126 55a55 55 0 0 1-95 48" stroke="#052d18" stroke-width="6"/>
+    <path d="M118 36h.1M112 28h.1M104 23h.1" stroke="#052d18" stroke-width="7"/>
+    <path d="M34 97c18-16 34-16 52 0 14 12 29 11 44-3" stroke="#052d18" stroke-width="5"/>
+    <path d="M45 89c17-13 32-12 48 3 12 11 23 12 34 2" stroke="#052d18" stroke-width="3.5"/>
+    <path d="M80 80V42M69 79 58 47M59 83 38 58M90 79l12-32M101 83l24-25M50 88l-26-10M111 88l30-11" stroke="#b78c60" stroke-width="3"/>
+  </g>
+</svg>

@@ -8,6 +8,8 @@
   --blue-soft: #dff2ff;
   --mint: #dff7e9;
   --lime: #d8f04c;
+  --deep-green: #052d18;
+  --bronze: #b78c60;
   --forest: #10382b;
   --sage: #8fc7a5;
   --gold: #dfc66b;
@@ -85,19 +87,19 @@ main > section {
 }
 
 .brand {
-  gap: 12px;
-  font-weight: 850;
+  gap: 10px;
+  color: var(--deep-green);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .brand-icon {
-  display: grid;
-  place-items: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 14px;
-  background: var(--black);
-  color: white;
-  font-family: Georgia, "Times New Roman", serif;
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
 }
 
 .nav-links {
@@ -136,6 +138,12 @@ main > section {
   text-align: center;
 }
 
+.hero-brand-mark {
+  width: clamp(82px, 9vw, 128px);
+  height: auto;
+  margin: 0 auto 12px;
+}
+
 .eyebrow {
   margin: 0 0 15px;
   color: var(--blue);
@@ -153,13 +161,16 @@ p {
 }
 
 h1 {
-  max-width: 1240px;
+  max-width: 1320px;
   margin-inline: auto;
   margin-bottom: 24px;
-  font-size: clamp(5.2rem, 15.2vw, 17rem);
-  font-weight: 760;
-  line-height: 0.74;
-  letter-spacing: -0.07em;
+  color: var(--deep-green);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(4.8rem, 12.4vw, 13.6rem);
+  font-weight: 500;
+  line-height: 0.82;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -697,7 +708,8 @@ details p {
 
   h1 {
     max-width: min(1160px, calc(100% - 32px));
-    font-size: clamp(5rem, 10vw, 10rem);
+    font-size: clamp(4.4rem, 8.8vw, 8.8rem);
+    letter-spacing: 0.11em;
   }
 
   .hero-copy > p:not(.eyebrow) {
@@ -737,8 +749,9 @@ details p {
   }
 
   h1 {
-    font-size: clamp(4.2rem, 18vw, 6.8rem);
-    line-height: 0.82;
+    font-size: clamp(2.55rem, 11.5vw, 4.6rem);
+    line-height: 0.9;
+    letter-spacing: 0.035em;
   }
 
   .hero-actions,
