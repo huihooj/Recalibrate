@@ -96,6 +96,16 @@ const quarterTitle = document.getElementById("quarter-title");
 const quarterStory = document.getElementById("quarter-story");
 const quarterItems = document.getElementById("quarter-items");
 
+function animateDropChange() {
+  if (!window.gsap || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  gsap.fromTo(
+    ".drop-card",
+    { autoAlpha: 0.82, y: 10 },
+    { autoAlpha: 1, y: 0, duration: 0.34, ease: "power2.out", overwrite: "auto" }
+  );
+}
+
 function renderQuarter(key) {
   const quarter = quarters[key];
   if (!quarter) return;
@@ -119,11 +129,70 @@ function renderQuarter(key) {
     tab.classList.toggle("is-active", isSelected);
     tab.setAttribute("aria-selected", String(isSelected));
   });
+
+  animateDropChange();
 }
 
 quarterTabs.forEach((tab) => {
   tab.addEventListener("click", () => renderQuarter(tab.dataset.quarter));
 });
 
+function initMotion() {
+  if (!window.gsap || !window.ScrollTrigger) return;
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const mm = gsap.matchMedia();
+
+  mm.add(
+    {
+      reduceMotion: "(prefers-reduced-motion: reduce)",
+      canAnimate: "(prefers-reduced-motion: no-preference)"
+    },
+    (context) => {
+      if (context.conditions.reduceMotion) {
+        gsap.set(".reveal-item, .reveal-section", { clearProps: "all" });
+        return undefined;
+      }
+
+      gsap.defaults({ ease: "power2.out", duration: 0.72 });
+
+      const intro = gsap.timeline();
+      intro
+        .from(".site-header", { y: -24, autoAlpha: 0, duration: 0.5 })
+        .from(".hero-copy > *", { y: 28, autoAlpha: 0, stagger: 0.08 }, "<0.12")
+        .from(".reset-status", { y: 34, autoAlpha: 0 }, "<0.18");
+
+      ScrollTrigger.batch(".reveal-section", {
+        start: "top 82%",
+        once: true,
+        onEnter: (batch) => {
+          gsap.fromTo(
+            batch,
+            { y: 34, autoAlpha: 0 },
+            { y: 0, autoAlpha: 1, stagger: 0.08, overwrite: "auto" }
+          );
+        }
+      });
+
+      gsap.to(".hero-bg", {
+        yPercent: 9,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero",
+          start: "top top",
+          end: "bottom top",
+          scrub: 0.7
+        }
+      });
+
+      return () => {
+        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      };
+    }
+  );
+}
+
 renderQuarter("q1");
 updatePlannerSummary();
+initMotion();
