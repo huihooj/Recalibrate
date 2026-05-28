@@ -93,7 +93,6 @@ main > section {
 .hero-actions,
 .choice-group,
 .planner-summary,
-.quarter-tabs,
 .status-topline,
 .status-chips {
   display: flex;
@@ -224,8 +223,6 @@ h3 {
 .hero-subline,
 .section-copy p,
 .center-copy p,
-.collection-copy p,
-.drop-copy p,
 .package-grid p,
 .steps-grid p,
 .faq-list p {
@@ -260,8 +257,7 @@ h3 {
 
 .button:hover,
 .route-card:hover,
-.choice:hover,
-.quarter-tab:hover {
+.choice:hover {
   transform: translateY(-2px);
 }
 
@@ -396,8 +392,7 @@ h3 {
   font-weight: 850;
 }
 
-.choice,
-.quarter-tab {
+.choice {
   min-height: 42px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -406,8 +401,7 @@ h3 {
   font-weight: 850;
 }
 
-.choice.is-active,
-.quarter-tab.is-active {
+.choice.is-active {
   border-color: var(--forest-dark);
   background: var(--forest-dark);
   color: white;
@@ -428,7 +422,6 @@ h3 {
 
 .feature-grid,
 .customize-section,
-.collection-section,
 .faq-section {
   display: grid;
   grid-template-columns: 0.86fr 1fr;
@@ -487,7 +480,6 @@ h3 {
 .score-card span,
 .route-card span,
 .package-grid span,
-.drop-art span,
 .steps-grid span {
   display: block;
   margin-bottom: 10px;
@@ -505,7 +497,6 @@ h3 {
 
 .template-section,
 .customize-section,
-.collection-section,
 .faq-section {
   margin-block: 112px;
 }
@@ -637,99 +628,6 @@ h3 {
   line-height: 1.55;
 }
 
-.collection-section {
-  grid-template-columns: 0.52fr 1fr;
-}
-
-.collection-browser {
-  padding: 18px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #e9e0d2;
-  box-shadow: var(--shadow);
-}
-
-.quarter-tabs {
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 14px;
-}
-
-.drop-card {
-  display: grid;
-  grid-template-columns: minmax(0, 0.84fr) minmax(280px, 0.68fr);
-  min-height: 510px;
-  overflow: hidden;
-  border-radius: 8px;
-  background: var(--surface);
-}
-
-.drop-art {
-  position: relative;
-  display: grid;
-  align-content: end;
-  min-height: 510px;
-  padding: 30px;
-  color: white;
-  background:
-    linear-gradient(180deg, rgba(8, 33, 22, 0.08), rgba(8, 33, 22, 0.78)),
-    var(--drop-image, url("./assets/stay-cabin.jpg")) center / cover;
-}
-
-.drop-art::after {
-  content: "";
-  position: absolute;
-  inset: 22px;
-  border: 1px solid rgba(215, 185, 111, 0.78);
-  background:
-    radial-gradient(circle at 60px 60px, transparent 0 42px, rgba(215, 185, 111, 0.42) 43px 44px, transparent 45px) 0 0 / 130px 130px;
-}
-
-.drop-art span,
-.drop-art strong {
-  position: relative;
-  z-index: 2;
-}
-
-.drop-art span {
-  color: var(--gold);
-}
-
-.drop-art strong {
-  max-width: 280px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 2.8rem;
-  font-weight: 520;
-  line-height: 0.98;
-}
-
-.drop-copy {
-  align-self: end;
-  padding: 32px;
-}
-
-.drop-copy h3 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 2.35rem;
-  font-weight: 520;
-  line-height: 1;
-}
-
-.drop-copy ul {
-  display: grid;
-  gap: 10px;
-  margin: 22px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.drop-copy li {
-  border-left: 3px solid var(--gold);
-  background: #eee6d8;
-  padding: 13px 15px;
-  font-weight: 780;
-}
-
 .business-section {
   padding: 108px 0;
   background: #dcebd8;
@@ -855,7 +753,6 @@ details p {
   .planner,
   .feature-grid,
   .customize-section,
-  .collection-section,
   .faq-section {
     grid-template-columns: 1fr;
   }
@@ -919,8 +816,7 @@ details p {
 
   .hero-actions,
   .planner-summary,
-  .choice-group,
-  .quarter-tabs {
+  .choice-group {
     align-items: stretch;
     flex-direction: column;
   }
@@ -933,14 +829,13 @@ details p {
 
   .planner,
   .ai-card,
-  .collection-browser {
+  .reset-status {
     padding: 20px;
   }
 
   .planner,
   .template-section,
   .customize-section,
-  .collection-section,
   .faq-section {
     margin-block: 72px;
   }
@@ -957,18 +852,6 @@ details p {
   .customize-canvas,
   .customize-canvas img {
     min-height: 390px;
-  }
-
-  .drop-card {
-    grid-template-columns: 1fr;
-  }
-
-  .drop-art {
-    min-height: 340px;
-  }
-
-  .drop-copy {
-    padding: 24px;
   }
 
   .package-grid,
